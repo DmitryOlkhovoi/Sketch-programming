@@ -1,4 +1,4 @@
-# Sketch-Programming: A Minimalist Paradigm for Code Design
+# Sketch-Programming: A Minimalist Paradigm for Code Design (LLM transpiler)
 Ideas, concepts, tools and examples of sketch programming using LLM
 
 ## Overview
