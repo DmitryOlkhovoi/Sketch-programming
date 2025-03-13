@@ -1,5 +1,5 @@
 # Sketch-programming
-Ideas, concepts, tools and examples of sketch programming
+Ideas, concepts, tools and examples of sketch programming using LLM
 
 ```javascript
 Counter component
