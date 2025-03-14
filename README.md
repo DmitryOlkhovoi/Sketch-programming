@@ -27,13 +27,17 @@ Sketch achieves its goals by:
 ## React.js example
 
 ```javascript
-Counter component
+// @sketch:reactComponent
 
-state count number = 0;
+Component Count
 
-<button onclick="count += 1">
-    { count }
-</button>
+props add = 0
+state count = 0
+
+<div onclick="count += add"> Add {add} </div>
+<div>
+    Current count: {count}
+</div>
 ```
 
 Equals to
@@ -41,17 +45,26 @@ Equals to
 ```typescript
 import React, { useState } from 'react';
 
-const Counter: React.FC = () => {
+interface Props {
+    add?: number;
+}
+
+const CountComponent: React.FC<Props> = ({ add = 0 }) => {
     const [count, setCount] = useState<number>(0);
 
+    const handleClick = () => {
+        setCount((prev: number) => prev + add);
+    };
+
     return (
-        <button onClick={() => setCount((prev: number) => prev + 1)}>
-            {count}
-        </button>
+        <div>
+            <div onClick={handleClick}>Add {add}</div>
+            <div>Current count: {count}</div>
+        </div>
     );
 };
 
-export default Counter;
+export default CountComponent;
 ```
 ### Extention for VS Code WIP
 https://github.com/DmitryOlkhovoi/vscode-sketch-programming
