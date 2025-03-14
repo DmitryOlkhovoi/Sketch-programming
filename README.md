@@ -53,3 +53,5 @@ const Counter: React.FC = () => {
 
 export default Counter;
 ```
+### Extention for VS Code WIP
+https://github.com/DmitryOlkhovoi/vscode-sketch-programming
