@@ -40,7 +40,7 @@ state count = 0
 </div>
 ```
 
-Equals to
+transforms to
 
 ```typescript
 import React, { useState } from 'react';
