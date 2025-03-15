@@ -31,22 +31,31 @@ Sketch achieves its goals by:
 
 ```javascript
 // @sketch:reactComponent
+// @ext:tsx
 
 Component Count
 
 props add = 0
 state count = 0
 
-<div onclick="count += add"> Add {add} </div>
+effect {
+    console.log("Component mounted");
+    
+    cleanup {
+        console.log("Cleanup");
+    }
+}
+
+<div onclick="count += add"> Will add {add} </div>
 <div>
-    Current count: {count}
+    Current  count: {count}
 </div>
 ```
 
 transforms to
 
 ```typescript
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface Props {
     add?: number;
@@ -55,14 +64,24 @@ interface Props {
 const CountComponent: React.FC<Props> = ({ add = 0 }) => {
     const [count, setCount] = useState<number>(0);
 
+    useEffect(() => {
+        console.log("Component mounted");
+
+        return () => {
+            console.log("Cleanup");
+        };
+    }, []);
+
     const handleClick = () => {
         setCount((prev: number) => prev + add);
     };
 
     return (
         <div>
-            <div onClick={handleClick}>Add {add}</div>
-            <div>Current count: {count}</div>
+            <div onClick={handleClick}> Will add {add} </div>
+            <div>
+                Current count: {count}
+            </div>
         </div>
     );
 };
