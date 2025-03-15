@@ -1,6 +1,9 @@
 # Sketch-Programming: A Minimalist Paradigm for Code Design (LLM transpiler)
 Ideas, concepts, tools and examples of sketch programming using LLM
 
+### Extention for VS Code WIP
+https://github.com/DmitryOlkhovoi/vscode-sketch-programming
+
 ## Overview
 
 **Sketch-programming** (or simply "Sketch") is a revolutionary approach to writing software that prioritizes simplicity, readability, and expressiveness. Unlike traditional programming languages or frameworks, Sketch is not a specific language but a **meta-programming paradigm**—a set of principles, conventions, and syntax patterns designed to abstract away boilerplate code, reduce cognitive overhead, and allow developers to focus on the core logic of their applications.
@@ -66,5 +69,3 @@ const CountComponent: React.FC<Props> = ({ add = 0 }) => {
 
 export default CountComponent;
 ```
-### Extention for VS Code WIP
-https://github.com/DmitryOlkhovoi/vscode-sketch-programming
