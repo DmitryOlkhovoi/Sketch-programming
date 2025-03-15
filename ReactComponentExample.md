@@ -1,9 +1,14 @@
 ```javascript
-Counter component
+// @sketch:reactComponent
+// @ext:tsx
 
-state count number = 0;
+Component Count
 
-<button onclick="count += 1">
-    { count }
-</button>
+props add = 0
+state count = 0
+
+<div onclick="count += add"> Will add {add} </div>
+<div>
+    Current count: {count}
+</div>
 ```
