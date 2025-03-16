@@ -1,6 +1,9 @@
 # Sketch-Programming: A Minimalist Paradigm for Code Design (LLM transpiler)
 Ideas, concepts, tools and examples of sketch programming using LLM
 
+<img width="1726" alt="Screenshot 2025-03-17 at 00 39 07" src="https://github.com/user-attachments/assets/cb495520-6b39-4a90-886b-f7f31cdc96d6" />
+
+
 ### Extention for VS Code WIP
 https://github.com/DmitryOlkhovoi/vscode-sketch-programming
 
